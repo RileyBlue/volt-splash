@@ -1,8 +1,7 @@
-/* Ajusta la disposición de los controles para que se muestren en línea */
 .controls-container {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Esto separará los grupos de controles */
+    justify-content: flex-end;
     padding: 16px;
     background: #fff;
     border-radius: 8px;
@@ -25,7 +24,7 @@
     align-items: center;
 }
 .form-group {
-    margin-right: 16px; /* Espacio entre los controles */
+    margin-right: 16px;
 }
 .form-group label {
     display: block;
@@ -88,4 +87,3 @@
 .button:hover {
     background-color: #031524;
 }
-  /* Añadir otros estilos específicos de Material Design según sea necesario */

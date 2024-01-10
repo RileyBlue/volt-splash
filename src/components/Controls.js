@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import './Controls.css';
 
 function Controls({ onUpdate, imageCount, setImageCount, width, setWidth, height, setHeight, grayscale, setGrayscale, blurEffect, setBlurEffect }) {
-    //const [width, setWidth] = useState(200);
-    //const [height, setHeight] = useState(200);
-    //const [grayscale, setGrayscale] = useState(false);
-    //const [blur, setBlur] = useState(false);
-
     const handleWidthChange = (event) => {
         setWidth(Number(event.target.value));
     };

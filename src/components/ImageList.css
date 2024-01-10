@@ -1,15 +1,12 @@
 /* ImageList.css */
 .ImageList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta este minmax según el tamaño mínimo deseado para tus imágenes */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     padding: 20px;
-    justify-items: center; /* Centra los elementos a lo largo del eje de alineación */
+    justify-items: center;
 }
 
-/* Añade una clase para los contenedores de imagen si no existe */
 .ImageList .image-container {
-    width: 100%; /* Asegúrate de que ocupen todo el espacio disponible en la celda del grid */
-    max-width: 200px; /* O el ancho máximo que desees para tus imágenes */
-    /* Añade estilos adicionales si es necesario */
+    width: 100%; 
+    max-width: 200px; 
 }

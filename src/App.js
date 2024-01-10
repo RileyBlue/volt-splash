@@ -8,18 +8,18 @@ function App() {
   const [width, setWidth] = useState(200);
   const [height, setHeight] = useState(200);
   const [grayscale, setGrayscale] = useState(false);
-  const [blurEffect, setBlurEffect] = useState(0); // Renombrar para evitar conflicto
+  const [blurEffect, setBlurEffect] = useState(0); 
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [imageCount, setImageCount] = useState(5);
 
   const fetchImageDetails = async (id, width, height, grayscale, blur) => {
-    // Construye la URL con los parámetros adecuados
+    // Construct the URL with the appropriate parameters
     let url = `https://picsum.photos/id/${id}/${width}/${height}?`;
     if (grayscale) url += 'grayscale&';
     if (blurEffect) url += 'blur&';
 
-    // Obtén la información de la imagen
+    // Retrieve the image information
     const response = await fetch(url);
     const imageDetails = await response.json();
     return imageDetails;
@@ -27,17 +27,16 @@ function App() {
 
   useEffect(() => {
     updateImages({ width, height, grayscale, blurEffect, count: imageCount });
-  }, [width, height, grayscale, blurEffect, imageCount]); // Actualiza las imágenes cuando estos valores cambian
+  }, [width, height, grayscale, blurEffect, imageCount]); // Update the images when these values change
 
 
   const updateImages = async(params) => {
     setIsLoading(true);
-    // Genera un valor único para cada imagen
+    // Generate a unique value for each image
     const uniqueValues = Array.from({ length: params.count }, () => 
       Math.random().toString(36).substr(2, 5)
     );
   
-    // Genera las solicitudes de imágenes con valores únicos
     const imagePromises = uniqueValues.map(uniqueValue => {
       let url = `https://picsum.photos/seed/${uniqueValue}/${params.width}/${params.height}`;
       if (params.grayscale) url += '?grayscale';
@@ -46,7 +45,7 @@ function App() {
       return fetch(url);
     }); 
   
-    // Procesa las respuestas
+    // Process the responses
     Promise.all(imagePromises)
       .then(responses => Promise.all(responses.map(res => {
         const picsumId = res.headers.get('Picsum-ID');
@@ -78,7 +77,7 @@ function App() {
         setHeight={setHeight}
         grayscale={grayscale}
         setGrayscale={setGrayscale}
-        blurEffect={blurEffect} // Usa el nuevo nombre
+        blurEffect={blurEffect} 
         setBlurEffect={setBlurEffect}
       />
       <div className="ImageList">

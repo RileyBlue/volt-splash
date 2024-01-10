@@ -3,7 +3,7 @@ import React from 'react';
 import Image from './Card';
 import './ImageList.css';
 
-function ImageList({ images, width, height, grayscale, blur }) {
+function ImageList({ images, width, height, grayscale, blurEffect }) {
     return (
         images.map((image, index) => (
             <Image 
@@ -13,7 +13,7 @@ function ImageList({ images, width, height, grayscale, blur }) {
                 width={width}
                 height={height}
                 grayscale={grayscale}
-                blur={blur}
+                blurEffect={blurEffect}
             />
         ))
     );
