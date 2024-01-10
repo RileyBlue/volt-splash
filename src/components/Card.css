@@ -1,0 +1,25 @@
+/* Card.css */
+.Image {
+    cursor: pointer; /* Cambia el cursor a pointer para indicar que se puede hacer clic */
+    border-radius: 10px; /* Bordes redondeados suaves */
+    overflow: hidden; /* Asegura que el contenido no sobrepase los bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    background: white; /* Fondo blanco para el estilo Material Design */
+    margin-bottom: 20px; /* Espacio debajo de cada imagen */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+}
+.Image:hover {
+    transform: scale(1.05); /* Efecto de escala ligera al pasar el ratón por encima */
+}
+.Image img {
+    width: 100%; /* La imagen debe ocupar el 100% del ancho de su contenedor */
+    display: block; /* Asegura que la imagen no tenga espacio extra alrededor */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible sin distorsión */
+}
+.Image p {
+    text-align: center; /* Centra el texto del autor */
+    padding: 0.5rem; /* Espaciado alrededor del texto del autor */
+    margin: 0; /* Elimina márgenes predeterminados del párrafo */
+    font-size: 0.9rem; /* Tamaño de fuente para el texto del autor */
+    color: #333; /* Color de texto para el autor */
+}
