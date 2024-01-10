@@ -87,3 +87,33 @@
 .button:hover {
     background-color: #031524;
 }
+
+/* Media query */
+@media (max-width: 600px) {
+    .controls-container {
+        justify-content: center;
+    }
+    .controls-container form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .size-controls, .filter-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .form-group {
+        margin-right: 2rem;
+        margin-bottom: 16px;
+    }
+
+    .form-group.blur, .form-group.imageCount {
+        width: auto;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
